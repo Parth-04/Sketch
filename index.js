@@ -14,6 +14,20 @@ for (let i=0; i<16; i++){
     mainDiv.appendChild(divRow);
 }
 
+let divColAll = document.querySelectorAll(".Col");
+
+divColAll.forEach(function(divCol) {
+    divCol.addEventListener('mouseover',() => {
+        divCol.setAttribute("style",divCol.getAttribute('style')+";background-color: red");
+    });
+});
+
+divColAll.forEach(function(divCol) {
+    divCol.addEventListener('mouseout',() => {
+        divCol.setAttribute("style",divCol.getAttribute('style')+";background-color: white");
+    });
+});
+
 btn.addEventListener('click', () => {
     let divGrid = document.querySelector(".grid");
     divGrid.innerHTML = '';
@@ -47,5 +61,7 @@ divColAll.forEach(function(divCol) {
 });
 
 })
+
+
 
 
