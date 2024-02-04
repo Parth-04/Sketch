@@ -10,3 +10,17 @@ for (let i=0; i<16; i++){
     }
     mainDiv.appendChild(divRow);
 }
+
+let divColAll = document.querySelectorAll(".Col");
+
+divColAll.forEach(function(divCol) {
+    divCol.addEventListener('mouseover',() => {
+        divCol.setAttribute("style","background-color: red");
+    });
+});
+
+divColAll.forEach(function(divCol) {
+    divCol.addEventListener('mouseout',() => {
+        divCol.setAttribute("style","background-color: white");
+    });
+});
